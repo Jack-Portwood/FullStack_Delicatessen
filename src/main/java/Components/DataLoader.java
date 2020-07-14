@@ -1,6 +1,7 @@
 package Components;
 
 import Models.Customer;
+import Models.Order;
 import Models.Produce;
 import Repositories.CustomerRepository;
 import Repositories.OrderRepository;
@@ -42,6 +43,8 @@ public class DataLoader implements ApplicationRunner {
 
         Produce produce4 = new Produce("Blue Cheese", "Fourme D\'Amert", "Fourme D\'Amert", "France", "Produced in the Auvergne region, Fourme d\'Ambert is one of France\'s oldest cheeses. Made with raw cow\'s milk. It\'s creamy, mellow and salty.","https://mellischeese.net/wp-content/uploads/2020/04/fourme-d-ambert-.jpg" ,10.00, 7.00);
         produceRepository.save(produce4);
+
+
 
 
     }

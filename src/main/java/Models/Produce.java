@@ -5,15 +5,17 @@ public class Produce {
     private String type;
     private String style;
     private String name;
+    private String origin;
     private String info;
     private String imgLink;
     private Double costPrice;
     private Double retailPrice;
 
-    public Produce(String type, String style, String name, String info, String imgLink, Double costPrice, Double retailPrice) {
+    public Produce(String type, String style, String name,String origin, String info, String imgLink, Double costPrice, Double retailPrice) {
         this.type = type;
         this.style = style;
         this.name = name;
+        this.origin = origin;
         this.info = info;
         this.imgLink = imgLink;
         this.costPrice = costPrice;
@@ -53,6 +55,14 @@ public class Produce {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
     public String getInfo() {

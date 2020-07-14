@@ -1,6 +1,6 @@
 package Models;
 
-public abstract class Produce {
+public class Produce {
     private Long id;
     private String type;
     private String style;

@@ -1,14 +1,32 @@
 package Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
+@Table(name = "Orders")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String customer;
+
+    @JsonIgnoreProperties(value ="orders")
+    @ManyToOne
+    @JoinColumn(name = "Customers")
+    private Customer customer;
+
+    @ManyToMany
+    @JoinTable(
+            name = "orders_products",
+            joinColumns = {@JoinColumn(name="order_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "produce_id", nullable = false, updatable = false)}
+    )
     private ArrayList<Produce>products;
 
-    public Order(String customer) {
+    public Order(Customer customer) {
         this.customer = customer;
         this.products = new ArrayList<>();
     }
@@ -24,11 +42,11 @@ public class Order {
         this.id = id;
     }
 
-    public String getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(String customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 

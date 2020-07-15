@@ -58,4 +58,9 @@ public class Order {
     public void setProducts(List<Produce> products) {
         this.products = products;
     }
+
+    public void addProduce(Produce produce){
+        this.products.add(produce);
+    }
 }
+

@@ -84,13 +84,22 @@ public class DataLoader implements ApplicationRunner {
         produceRepository.save(produce16);
 
 
-//        Order order1 = new Order(customer1);
-//        orderRepository.save(order1);
-//        order1.addProduce(produce7);
-//        order1.addProduce(produce10);
-//        order1.addProduce(produce13);
-//
-//        orderRepository.save(order1);
+        Order order1 = new Order(customer1);
+        orderRepository.save(order1);
+        order1.addProduce(produce7);
+        order1.addProduce(produce10);
+        order1.addProduce(produce13);
+
+        orderRepository.save(order1);
+
+        Order order2 = new Order(customer2);
+        orderRepository.save(order2);
+        order2.addProduce((produce5));
+        order2.addProduce((produce12));
+        order2.addProduce((produce16));
+        order2.addProduce((produce8));
+
+        orderRepository.save(order2);
 
 
 

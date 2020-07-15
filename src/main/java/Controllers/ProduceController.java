@@ -5,9 +5,7 @@ import Repositories.ProduceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,6 +25,23 @@ public class ProduceController {
         return new ResponseEntity<>(produceRepository.findById(id), HttpStatus.OK);
     }
 
+    @PostMapping(value ="/products")
+    public ResponseEntity<Produce> postProduce(@RequestBody Produce produce){
+        produceRepository.save(produce);
+        return new ResponseEntity<>(produce, HttpStatus.CREATED);
+    }
 
+    @PatchMapping(value = "/products/{id}")
+    public ResponseEntity<Produce> updateProduce(@RequestBody Produce produce){
+        produceRepository.save(produce);
+        return new ResponseEntity<>(produce, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/products/{id}")
+    public ResponseEntity<Produce> deleteProduce(@PathVariable Long id){
+        Produce found = produceRepository.getOne(id);
+        produceRepository.delete(found);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
 }
 

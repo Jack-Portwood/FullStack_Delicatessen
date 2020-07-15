@@ -43,9 +43,4 @@ public class CustomerController {
         customerRepository.delete(found);
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
-
-
-
-
-
 }

@@ -43,7 +43,29 @@ public class DataLoader implements ApplicationRunner {
         Produce produce4 = new Produce("Blue Cheese", "Fourme D\'Amert", "Fourme D\'Amert", "France", "Produced in the Auvergne region, Fourme d\'Ambert is one of France\'s oldest cheeses. Made with raw cow\'s milk. It\'s creamy, mellow and salty.","https://mellischeese.net/wp-content/uploads/2020/04/fourme-d-ambert-.jpg" ,10.00, 7.00);
         produceRepository.save(produce4);
 
+        Produce produce5 = new Produce( "Hard Cheese", "Smoked Cheddar", "Auld Reekie", "Scotland", "A two day curd cow\'s milk cheese from Aberdeenshire. Auld Reekie is smoked over whisky barrel shavings. Named after Scotland\'s capital, Edinburgh due to its smokey flavour. A fresh and mild taste with a nice crumbly texture", "https://mellischeese.net/wp-content/uploads/2017/12/Snapseed-2-copy.jpg", 10.00, 8.00 );
+        produceRepository.save(produce5);
 
+        Produce produce6 = new Produce( "Hard Cheese", "Raw Goats Milk", "Bethmale Chevre", "France", "A rubbed, brushed and lightly washed rind housing a chewy-textured cheese, pitted with tiny pinholes. Lovely earthy, floral flavours with nutty rustic undertones in the taste.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_9678.jpg", 10.00, 7.00);
+        produceRepository.save(produce6);
+
+        Produce produce7 = new Produce("Hard Cheese", "Gruyere", "Comte", "France","This Comté has been aged for 22months to give a greater depth of flavour. The complex array of sweet, nutty, floral and herbal notes to be found in Comté is attributed to the cows that supply the milk, and the rich grasslands they roam.", "https://mellischeese.net/wp-content/uploads/2018/01/IMG_9874.jpg", 10.00, 8.00);
+        produceRepository.save(produce7);
+
+        Produce produce8 = new Produce("Hard Cheese", "Cheddar", "Auld Lochagar", "Scotland", "Matured for 12 months resulting in a complex flavour, this cheese is rich and fruity with a sharp bite. Although smooth Lochnagar has a slightly drier texture than our other cheddar types, it is also mellower and fruitier.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_9633-2.jpg", 10.00, 5.00 );
+        produceRepository.save(produce8);
+
+        Produce produce9 = new Produce("Soft Cheese", "Goats Cheese", "Elrick Log", "Scotland", "Elrick Log is a fresh, lactic, log-shaped goat cheese with a distinctive lemon flavour and a silky smooth, thick texture. This vivid ash coated goat log, with a natural rind. Made in Lanarkshire, Scotland.", "https://mellischeese.net/wp-content/uploads/2020/01/Screenshot-2020-06-03-at-18.54.55.png",6.00, 12.00);
+        produceRepository.save(produce9);
+
+        Produce produce10 = new Produce("Soft Cheese", "Brie", "Clava Brie", "ScotLand", "A pasteurised brie made in Inverness-shire, Scotland. A soft and creamy cow\'s milk cheese with a nice bite. Clava is named after a bronze aged circular burial cairn near the farm.","https://mellischeese.net/wp-content/uploads/2017/12/IMG_9682.jpg", 10.00, 4.00);
+        produceRepository.save(produce10);
+
+        Produce produce11 = new Produce("Soft Cheese","Camembert", "Camembert Reaux", "France", "The classic French Camembert from one of the very best producers. It can be pungent and vegetal with mushroom-y undertones, though when slightly younger it is lactic and milky. Camembert Reaux is creamy rich texture and melting mouth feel.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_9687.jpg", 4.00, 8.50);
+        produceRepository.save(produce11);
+
+        Produce produce12 = new Produce("Soft Cheese", "Ewe\'s Milk Cheese", "Lancelot", "Scotland","A fresh ewe\'s milk cheese made in Lanarkshire. Lemony, citrusy and fresh flavours with a creamy texture. Made in Lanarkshire, Scotland.","https://mellischeese.net/wp-content/uploads/2020/04/lancelot.jpg", 4.00, 9.00 );
+        produceRepository.save(produce12);
 
 
     }

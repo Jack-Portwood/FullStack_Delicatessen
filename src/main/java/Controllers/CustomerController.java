@@ -31,6 +31,19 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
+    @PatchMapping(value = "/customers")
+    public ResponseEntity<Customer> updateCustomer(@RequestBody Customer customer){
+        customerRepository.save(customer);
+        return new ResponseEntity<>(customer, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/customer/{id}")
+    public ResponseEntity<Customer> deleteCutomer(@PathVariable Long id){
+        Customer found = customerRepository.getOne(id);
+        customerRepository.delete(found);
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
 
 
 

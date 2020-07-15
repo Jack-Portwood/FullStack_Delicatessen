@@ -20,24 +20,24 @@ public class ProduceController {
         return new ResponseEntity<>(produceRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/products/{id}")
+    @GetMapping(value = "/produces/{id}")
     public ResponseEntity getProduce (@PathVariable Long id){
         return new ResponseEntity<>(produceRepository.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping(value ="/products")
+    @PostMapping(value ="/produces")
     public ResponseEntity<Produce> postProduce(@RequestBody Produce produce){
         produceRepository.save(produce);
         return new ResponseEntity<>(produce, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "/products/{id}")
+    @PatchMapping(value = "/produces/{id}")
     public ResponseEntity<Produce> updateProduce(@RequestBody Produce produce){
         produceRepository.save(produce);
         return new ResponseEntity<>(produce, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/products/{id}")
+    @DeleteMapping(value = "/produces/{id}")
     public ResponseEntity<Produce> deleteProduce(@PathVariable Long id){
         Produce found = produceRepository.getOne(id);
         produceRepository.delete(found);

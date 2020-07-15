@@ -31,7 +31,7 @@ public class OrderController {
         return new ResponseEntity<>(order, HttpStatus.OK);
     }
 
-    @PatchMapping(value= "/orders.{id}")
+    @PatchMapping(value= "/orders/{id}")
     public ResponseEntity<Order>updateOrder(@RequestBody Order order){
         orderRepository.save(order);
         return new ResponseEntity<>(order, HttpStatus.OK);

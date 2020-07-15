@@ -1,9 +1,10 @@
-package Models;
+package com.example.delicatessen.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "Orders")
@@ -24,7 +25,7 @@ public class Order {
             joinColumns = {@JoinColumn(name="order_id", nullable = false, updatable = false)},
             inverseJoinColumns = {@JoinColumn(name = "produce_id", nullable = false, updatable = false)}
     )
-    private ArrayList<Produce>products;
+    private List<Produce> products;
 
     public Order(Customer customer) {
         this.customer = customer;
@@ -50,11 +51,11 @@ public class Order {
         this.customer = customer;
     }
 
-    public ArrayList<Produce> getProducts() {
+    public List<Produce> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Produce> products) {
+    public void setProducts(List<Produce> products) {
         this.products = products;
     }
 }

@@ -1,8 +1,8 @@
 //package Tests;
 //
-//import Models.Customer;
+//import com.example.delicatessen.Models.Customer;
 //
-//import Repositories.CustomerRepository;
+//import com.example.delicatessen.Repositories.CustomerRepository;
 //import org.aspectj.lang.annotation.Before;
 //import org.junit.jupiter.api.Test;
 //import org.springframework.beans.factory.annotation.Autowired;

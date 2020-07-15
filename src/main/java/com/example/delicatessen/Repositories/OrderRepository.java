@@ -1,6 +1,6 @@
-package Repositories;
+package com.example.delicatessen.Repositories;
 
-import Models.Order;
+import com.example.delicatessen.Models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository <Order, Long> {

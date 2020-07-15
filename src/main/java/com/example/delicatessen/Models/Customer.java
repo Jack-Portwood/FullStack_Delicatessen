@@ -1,9 +1,10 @@
-package Models;
+package com.example.delicatessen.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="Customers")
@@ -21,7 +22,7 @@ public class Customer {
 
     @JsonIgnoreProperties(value = "customers")
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-    private ArrayList<Order>orders;
+    private List<Order> orders;
 
     public Customer(String firstName, String secondName) {
         this.firstName = firstName;
@@ -56,11 +57,11 @@ public class Customer {
         this.secondName = secondName;
     }
 
-    public ArrayList<Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(ArrayList<Order> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 }

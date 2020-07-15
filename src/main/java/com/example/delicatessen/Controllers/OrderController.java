@@ -1,7 +1,7 @@
-package Controllers;
+package com.example.delicatessen.Controllers;
 
-import Models.Order;
-import Repositories.OrderRepository;
+import com.example.delicatessen.Models.Order;
+import com.example.delicatessen.Repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

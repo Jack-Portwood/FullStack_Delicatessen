@@ -1,6 +1,4 @@
-package Models;
-
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+package com.example.delicatessen.Models;
 
 import javax.persistence.*;
 
@@ -30,7 +28,7 @@ public class Produce {
     @Column(name="image")
     private String imgLink;
 
-    @Column(name="retail_price")
+    @Column(name="cost_price")
     private Double costPrice;
 
     @Column(name="retail_price")

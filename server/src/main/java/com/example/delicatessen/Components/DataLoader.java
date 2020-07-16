@@ -62,7 +62,7 @@ public class DataLoader implements ApplicationRunner {
         Produce produce9 = new Produce("Soft Cheese", "Goats Cheese", "Elrick Log", "Scotland", "Elrick Log is a fresh, lactic, log-shaped goat cheese with a distinctive lemon flavour and a silky smooth, thick texture. This vivid ash coated goat log, with a natural rind. Made in Lanarkshire, Scotland.", "https://mellischeese.net/wp-content/uploads/2020/01/Screenshot-2020-06-03-at-18.54.55.png",6.00, 12.00);
         produceRepository.save(produce9);
 
-        Produce produce10 = new Produce("Soft Cheese", "Brie", "Clava Brie", "ScotLand", "A pasteurised brie made in Inverness-shire, Scotland. A soft and creamy cow\'s milk cheese with a nice bite. Clava is named after a bronze aged circular burial cairn near the farm.","https://mellischeese.net/wp-content/uploads/2017/12/IMG_9682.jpg", 10.00, 4.00);
+        Produce produce10 = new Produce("Soft Cheese", "Brie", "Clava Brie", "Scotland", "A pasteurised brie made in Inverness-shire, Scotland. A soft and creamy cow\'s milk cheese with a nice bite. Clava is named after a bronze aged circular burial cairn near the farm.","https://mellischeese.net/wp-content/uploads/2017/12/IMG_9682.jpg", 10.00, 4.00);
         produceRepository.save(produce10);
 
         Produce produce11 = new Produce("Soft Cheese","Camembert", "Camembert Reaux", "France", "The classic French Camembert from one of the very best producers. It can be pungent and vegetal with mushroom-y undertones, though when slightly younger it is lactic and milky. Camembert Reaux is creamy rich texture and melting mouth feel.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_9687.jpg", 4.00, 8.50);

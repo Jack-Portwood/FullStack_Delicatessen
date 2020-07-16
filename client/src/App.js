@@ -1,10 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import WelcomeContainer from './containers/WelcomeContainer';
 
-function App() {
+class App extends Component {
+  render(){
   return (
-    <h1>A.S.Cooper Delicatessen</h1>
-  );
-}
+    <div>
+      <WelcomeContainer/>
 
+    </div>
+  );
+  }
+}
 export default App;

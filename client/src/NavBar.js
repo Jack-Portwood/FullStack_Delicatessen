@@ -2,16 +2,14 @@ import React from 'react';
 
 const NavBar = (props) => {
     return (
-      <header>
-        <h1 className ="title-header"> Ollie Burdekin's Delicatessen</h1>
-        <ul className = "ul-links-bar">
-        <li className="navlink">
+      <header className='navbar'>
+        <div className ="title-header"> Ollie Burdekin's Delicatessen</div>
+        <div className="navlink">
         <a href="/products"> Buy </a>
-        </li>
-        <li className="navlink">
+        </div>
+        <div className="navlink">
         <a href="/products"> Contact </a>
-        </li>
-        </ul>
+        </div>
       </header>
     );
 }

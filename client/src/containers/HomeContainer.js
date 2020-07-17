@@ -1,18 +1,18 @@
 import React from "react";
 import { Parallax } from "react-parallax";
+import image1 from "../images/image1.jpg";
+import image2 from "../images/image2.jpg";
+import image3 from "../images/image3.jpg";
 
-const image1 = "https://mellischeese.net/wp-content/uploads/2017/12/IMG_9680.jpg";
-const image2 = "https://mellischeese.net/wp-content/uploads/2017/12/IMG_9739.jpg";
-const image3 =  "https://mellischeese.net/wp-content/uploads/2020/04/IMG_1576__1588243470_92.207.104.30.jpg";
 
 const inlineStyle = {
-  background: '#fff',
-  left: '50%',
-  top: '50%',
-  position:'absolute',
-  padding: '20px',
-  transform: 'translate(-50%, -50%)'
-}
+  background: "#f9f9f9",
+  left: "50%",
+  top: "50%",
+  position: "absolute",
+  padding: "20px",
+  transform: "translate(-50%, -50%)",
+};
 function HomeContainer() {
   return (
     <div style={{ textAlign: "center" }}>

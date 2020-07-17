@@ -16,6 +16,7 @@ const inlineStyle = {
 function HomeContainer() {
   return (
     <div style={{ textAlign: "center" }}>
+      <h1>. . .</h1>
       <Parallax bgImage={image1} strength={500} blur={{ min: -1, max: 3 }}>
         <div style={{ height: 800 }}>
           <div style={inlineStyle}>Our Story</div>
@@ -23,7 +24,7 @@ function HomeContainer() {
       </Parallax>
 
       <h1>. . .</h1>
-      <Parallax bgImage={image2} blur={{ min: -1, max: 6 }}>
+      <Parallax bgImage={image2} blur={{ min: -1, max: 3 }}>
         <div style={{ height: 800 }}>
           <p style={inlineStyle}>Our Vision</p>
         </div>

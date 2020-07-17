@@ -35,7 +35,8 @@ function HomeContainer() {
           <div style={inlineStyle}>Our Promise</div>
         </div>
       </Parallax>
-      <div style={{ height: "50vh" }}></div>
+      <h1>.  .  .</h1>
+      <div style={{ height: "5vh" }}></div>
     </div>
   );
 }

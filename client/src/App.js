@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WelcomeContainer from './containers/WelcomeContainer';
+import RoutesContainer from './containers/RoutesContainer';
 import "./App.css" 
 
 
@@ -7,7 +7,7 @@ class App extends Component {
   render(){
   return (
     <div>
-      <WelcomeContainer/>
+      <RoutesContainer/>
 
     </div>
   );

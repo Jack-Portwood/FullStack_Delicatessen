@@ -9,21 +9,28 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 const RoutesContainer = () =>{
-    return(
-        <Router>
-            <Fragment>
-            <NavBar/>
-            <Switch>
-            <Route path ="/Home" component={HomeContainer}/>
-            <Route path="/produce" component={ProduceContainer}/>
-            <Route path="/contact" component={ContactContainer}/>
-            <Route path="/basket" component={BasketContainer}/>
-            </Switch>
-            <Footer/>
-            </Fragment>
-        </Router>
-        
-    )
+    return (
+      <Router>
+        <Fragment>
+          <NavBar />
+          <Switch>
+            <Route path="/Home" component={HomeContainer} />
+            <Route path="/produce" component={ProduceContainer} />
+            <Route path="/contact" component={ContactContainer} />
+            <Route path="/basket" component={BasketContainer} />
+          </Switch>
+          <Footer />
+        </Fragment>
+      </Router>
+    );
 }
 
 export default RoutesContainer;
+
+{/* <Route
+  path="/personalloan"
+  exact
+  render={(props) => {
+    return <Loan handledataLoan={handledataLoan} loandata={loandata} />;
+  }}
+/>; */} //code from Peter check out Pirates for routes

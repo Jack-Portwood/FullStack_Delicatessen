@@ -13,6 +13,7 @@ const inlineStyle = {
   padding: "20px",
   transform: "translate(-50%, -50%)",
 };
+
 function HomeContainer() {
   return (
     <div style={{ textAlign: "center" }}>

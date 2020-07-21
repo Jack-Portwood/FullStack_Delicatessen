@@ -1,5 +1,5 @@
 import React, {Fragment, Component} from "react";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, NavLink,Link} from 'react-router-dom';
 import BlueCheeseComponent from "../components/BlueCheese/BlueCheeseComponent.js";
 import HardCheeseComponent from "../components/HardCheese/HardCheeseComponent.js";
 import SoftCheeseComponent from "../components/SoftCheese/SoftCheeseComponent.js";
@@ -7,75 +7,58 @@ import PantryComponent from "../components/Pantry/PantryComponent.js";
 import Requests from "../helpers/requests";
 
 
-class ProduceContainer extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            produce: []
-        }
-    }
+const ProduceContainer = () => {
+    // constructor(props){
+    //     super(props)
+    //     this.state = {
+    //         produce: []
+    //     }
+    // }
 
-    componentDidMount(){
-        const requests = new Requests();
-        requests.get('/api/produce')
-        .then((data) => {
-            this.setState({produce: data})
-        })
-    }
+    // componentDidMount(){
+    //     const requests = new Requests();
+    //     requests.get('/api/produce')
+    //     .then((data) => {
+    //         this.setState({produce: data})
+    //     })
+    // }
 
-    handlePost(produce){
-        const requests = new Requests();
-        requests.post('/api/produce', produce)
-        .then ( () => {
-            window.location = '/pirates'
-        })
-    }
+    // handlePost(produce){
+    //     const requests = new Requests();
+    //     requests.post('/api/produce', produce)
+    //     .then ( () => {
+    //         window.location = '/pirates'
+    //     })
+    // }
 
 
   
 
     
-        render(){
+    //     render(){
 
-        if(!this.state.produce){
-            return null
-        }
-
-        return (
-          <Router>
-            <Fragment>
-              <Switch>
-                <Route
-                  exact path="/produce/bluecheese" render={() => {
-                    return <BlueCheeseComponent onCreate={this.handlePost} />;
-                  }}/>
-
-
-                <Route
-                  exact path="/produce/hardcheese" render={() => {
-                    return (
-                      <HardCheeseComponent onCreate={this.handlePost} />
-                    );
-                  }}/>
-
-                <Route
-                  exact path="/produce/softcheese" render={() => {
-                    return (
-                      <SoftCheeseComponent onCreate={this.handlePost} />
-                    );
-                  }}/>
-
-                <Route
-                  exact path="/produce/pantry" render={() => {
-                    return <PantryComponent onCreate={this.handlePost} />;
-                  }}/>
-              </Switch>
-            </Fragment>
-          </Router>
-        )
-    }
+    //     if(!this.state.produce){
+    //         return null
+    //     }
+    return (
+      <div>
+        <ul>
+          <li>
+            <Link to="/bluecheese">Blue Cheese</Link>
+          </li>
+          <li>
+            <Link to="/hardcheese">Hard Cheese</Link>
+          </li>
+          <li>
+            <Link to="/softcheese">Soft Cheese</Link>
+          </li>
+          <li>
+            <Link to="/pantry">Pantry</Link>
+          </li>
+        </ul>
+      </div>
+    );
+    
 
 }
-
-
 export default ProduceContainer;

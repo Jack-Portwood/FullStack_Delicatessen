@@ -1,17 +1,7 @@
-import React, {Fragment} from "react";
+import React from "react";
 
-const BlueCheeseComponent = (props) => {
-  if(!props.produce){
-    return "loading..."
-  }
-
-  return (
-    <Fragment>
-      <p>
-        {props.produce.type} {props.produce.name}
-      </p>
-    </Fragment>
-  )
+function BlueCheeseComponent() {
+  return <h1>Hello Im the Blue Cheese Component</h1>;
 }
 
 export default BlueCheeseComponent;

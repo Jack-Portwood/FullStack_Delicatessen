@@ -12,7 +12,7 @@ class Request {
         })
     }
 
-    post(url, playload){
+    post(url, payload){
         return fetch(url, {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)

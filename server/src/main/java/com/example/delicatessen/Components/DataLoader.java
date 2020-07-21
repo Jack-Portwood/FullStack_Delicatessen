@@ -74,13 +74,13 @@ public class DataLoader implements ApplicationRunner {
         Produce produce13 = new Produce("Biscuit", "Oatcake", "Adamsons Oatcakes", "Scotland", "A classic Scottish Oatcake made in Pittenweem, Fife. Crumbly, earthy and oaty. A perfect addition to a cheeseboard and fantastic with our Spicy Tomato Chutney", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_0059.jpg", 00.50, 2.25);
         produceRepository.save(produce13);
 
-        Produce produce14 = new Produce("Flour", "Pasta Flour", "Tre Grazie Tipo '00'", "Italy", "Tre Grazie means ‘the three graces’, and each bag of flour is adorned with an illustration of beauty, mirth and elegance", "https://mellischeese.net/wp-content/uploads/2020/04/pasta-flour-copy.jpg", 00.50, 2.96);
+        Produce produce14 = new Produce("Pantry", "Pasta Flour", "Tre Grazie Tipo '00'", "Italy", "Tre Grazie means ‘the three graces’, and each bag of flour is adorned with an illustration of beauty, mirth and elegance", "https://mellischeese.net/wp-content/uploads/2020/04/pasta-flour-copy.jpg", 00.50, 2.96);
         produceRepository.save(produce14);
 
-        Produce produce15 = new Produce("Flour", "Beard Flour", "Mungoswells Strong Bread Flour", "Scotland", "Strong Bread flour made by Mungoswells in East Lothian, Scotland. Their flour is made entirely from wheat grown in East Lothian. They grow different varieties of wheat suitable for making different types of flour.", "https://mellischeese.net/wp-content/uploads/2020/04/bread-flour-1-1.jpg", 1.00, 3.10);
+        Produce produce15 = new Produce("Pantry", "Beard Flour", "Mungoswells Strong Bread Flour", "Scotland", "Strong Bread flour made by Mungoswells in East Lothian, Scotland. Their flour is made entirely from wheat grown in East Lothian. They grow different varieties of wheat suitable for making different types of flour.", "https://mellischeese.net/wp-content/uploads/2020/04/bread-flour-1-1.jpg", 1.00, 3.10);
         produceRepository.save(produce15);
 
-        Produce produce16 = new Produce("Preserve", "Fruit", "Rosebud Fig Chutney", "Scotland", "Luxuary Chutney compliments any cheese board.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_0113.jpg", 1.50, 5.30);
+        Produce produce16 = new Produce("Pantry", "Fruit", "Rosebud Fig Chutney", "Scotland", "Luxuary Chutney compliments any cheese board.", "https://mellischeese.net/wp-content/uploads/2017/10/IMG_0113.jpg", 1.50, 5.30);
         produceRepository.save(produce16);
 
 

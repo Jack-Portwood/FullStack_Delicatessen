@@ -6,13 +6,18 @@ import BasketContainer from "./BasketContainer.js";
 import HomeContainer from "./HomeContainer.js"
 import Footer from '../Footer.js'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import BlueCheeseComponent from '../components/BlueCheese/BlueCheeseComponent.js';
+import CheeseComponent from '../components/BlueCheese/CheeseComponent.js';
 import HardCheeseComponent from '../components/HardCheese/HardCheeseComponent.js';
 import SoftCheeseComponent from '../components/SoftCheese/SoftCheeseComponent.js';
 import PantryComponent from '../components/Pantry/PantryComponent.js';
 
 
 const RoutesContainer = () =>{
+
+  const blue = "Blue Cheese"
+  const hard = "Hard Cheese"
+  const soft = "Soft Cheese"
+  const pantry = "pantry"
     return (
       <Router>
         <Fragment>
@@ -22,10 +27,27 @@ const RoutesContainer = () =>{
             <Route path="/produce" component={ProduceContainer} />
             <Route path="/contact" component={ContactContainer} />
             <Route path="/basket" component={BasketContainer} />
-            <Route path="/bluecheese"component={BlueCheeseComponent}/>
-            <Route path="/hardcheese" component={HardCheeseComponent}/>
-            <Route path="/softcheese" component={SoftCheeseComponent}/>
-            <Route path="/pantry" component={PantryComponent}/>
+
+            <Route exact path="/bluecheese" render ={(props) => {
+            return <CheeseComponent product = {blue}/> 
+            }}/>
+
+
+            
+            <Route exact path="/hardcheese" render ={(props) => {
+            return <CheeseComponent product = {hard}/> 
+            }}/>
+            
+            
+            <Route exact path="/softcheese" render ={(props) => {
+            return <CheeseComponent product = {soft}/> 
+            }}/>
+
+
+
+            <Route exact path="/pantry" render ={(props) => {
+            return <CheeseComponent product = {pantry}/> 
+            }}/>
           </Switch>
           <Footer />
         </Fragment>

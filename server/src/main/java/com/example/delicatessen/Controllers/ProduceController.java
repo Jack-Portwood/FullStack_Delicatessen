@@ -19,7 +19,7 @@ public class ProduceController {
     public ResponseEntity<List<Produce>> getAllProduce(){
         return new ResponseEntity<>(produceRepository.findAll(), HttpStatus.OK);
     }
-    
+    g
     @GetMapping(value ="/produce/type/{type}")
     public ResponseEntity getType (@PathVariable String type){
         return new ResponseEntity<>(produceRepository.findByType(type), HttpStatus.OK);

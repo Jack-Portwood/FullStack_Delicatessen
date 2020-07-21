@@ -15,34 +15,34 @@ public class ProduceController {
     @Autowired
     ProduceRepository produceRepository;
 
-    @GetMapping(value="/products")
+    @GetMapping(value="/produce")
     public ResponseEntity<List<Produce>> getAllProduce(){
         return new ResponseEntity<>(produceRepository.findAll(), HttpStatus.OK);
     }
-    g
+
     @GetMapping(value ="/produce/type/{type}")
-    public ResponseEntity getType (@PathVariable String type){
+    public ResponseEntity<List<Produce>> getType(@PathVariable String type){
         return new ResponseEntity<>(produceRepository.findByType(type), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/produces/{id}")
+    @GetMapping(value = "/produce/{id}")
     public ResponseEntity getProduce (@PathVariable Long id){
         return new ResponseEntity<>(produceRepository.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping(value ="/produces")
+    @PostMapping(value ="/produce")
     public ResponseEntity<Produce> postProduce(@RequestBody Produce produce){
         produceRepository.save(produce);
         return new ResponseEntity<>(produce, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "/produces/{id}")
+    @PatchMapping(value = "/produce/{id}")
     public ResponseEntity<Produce> updateProduce(@RequestBody Produce produce){
         produceRepository.save(produce);
         return new ResponseEntity<>(produce, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/produces/{id}")
+    @DeleteMapping(value = "/produce/{id}")
     public ResponseEntity<Produce> deleteProduce(@PathVariable Long id){
         Produce found = produceRepository.getOne(id);
         produceRepository.delete(found);

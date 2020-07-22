@@ -28,13 +28,35 @@
    
 }
 
-/* .parallax {
-  text-align: center;
-  background: #fff;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  padding: 20px;
-  transform: translate(-50%, -50%);
- 
-} */
+.produce-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.blue-cheese-box {
+  width: 50px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  
+}
+
+.hard-cheese-box {
+  width: 50px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;}
+
+.soft-cheese-box {
+  width: 50px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+.pantry-box {
+  width: 50px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}

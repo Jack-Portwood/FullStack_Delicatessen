@@ -1,26 +1,25 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-;
 
 
 const ProduceContainer = () => {
     
     return (
-      <div>
-        <ul>
-          <li>
+      <div className = "produce-boxes">
+        
+          <div className = "blue-cheese-box">
             <Link to="/bluecheese">Blue Cheese</Link>
-          </li>
-          <li>
+          </div>
+          <div className = "hard-cheese-box">
             <Link to="/hardcheese">Hard Cheese</Link>
-          </li>
-          <li>
+          </div>
+          <div className = "soft-cheese-box">
             <Link to="/softcheese">Soft Cheese</Link>
-          </li>
-          <li>
+          </div>
+          <div className = "pantry-box">
             <Link to="/pantry">Pantry</Link>
-          </li>
-        </ul>
+          </div>
+
       </div>
     );
     

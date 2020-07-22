@@ -1,18 +1,29 @@
 import React, { useEffect, useState } from "react";
 import Request from "../helpers/request.js";
 
-function ProduceComponent() {
+function ProduceComponent(props) {
   const [produce, setProduce] = useState([]);
 
   useEffect(() => {
     // container for fetched data
     const tempProduce = [];
-    const url = "/api/produce/type/hardcheese";
+    const url = `/api/produce/type/${props.product}`;
     const request = new Request();
-    request.get(url).then((data) => console.log(data));
+    request.get(url).then((data) => setProduce(data));
   }, []);
 
-  return <h1> Hello I am the Produce compnent </h1>;
+  const stock = produce.map((item, index) => (
+     
+      <li>
+        {item.name}
+        <img src = {item.imgLink} />
+      </li>
+    
+  ))
+
+  return (
+  <ul> {stock} </ul>
+  );
 }
 
 export default ProduceComponent;

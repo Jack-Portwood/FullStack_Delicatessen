@@ -21,31 +21,30 @@ const RoutesContainer = () =>{
         <Fragment>
           <NavBar />
           <Switch>
+
             <Route path="/home" component={HomeContainer} />
             <Route path="/produce" component={ProduceContainer} />
             <Route path="/contact" component={ContactContainer} />
             <Route path="/basket" component={BasketContainer} />
 
             <Route exact path="/bluecheese" render ={(props) => {
-            return <ProduceComponent product = {blue}/> 
+            return <ProduceComponent product = {blue}/>;
             }}/>
 
-
-            
             <Route exact path="/hardcheese" render ={(props) => {
             return <ProduceComponent product={hard} />; 
             }}/>
-            
-            
+      
             <Route exact path="/softcheese" render ={(props) => {
             return <ProduceComponent product={soft} />; 
             }}/>
 
-
-
             <Route exact path="/pantry" render ={(props) => {
             return <ProduceComponent product={pantry} />; 
             }}/>
+
+      
+            
           </Switch>
           <Footer/>
         </Fragment>

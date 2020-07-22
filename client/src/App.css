@@ -29,6 +29,7 @@
 }
 
 .produce-boxes {
+  align-items: ;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

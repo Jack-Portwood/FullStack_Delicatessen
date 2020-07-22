@@ -60,3 +60,9 @@
   padding: 50px;
   margin: 20px;
 }
+
+.product-image {
+  height: 45vh;
+  width:  45vh;
+
+}

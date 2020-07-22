@@ -12,13 +12,13 @@ function ProduceComponent(props) {
   }, []);
 
   const stock = produce.map((item, index) => (
-     
-      <li>
-        {item.name}
-        <img src = {item.imgLink} />
-      </li>
-    
-  ))
+    <div>
+      {item.name}
+      
+        <img className="product-image" src={item.imgLink} />
+
+    </div>
+  ));
 
   return (
   <ul> {stock} </ul>

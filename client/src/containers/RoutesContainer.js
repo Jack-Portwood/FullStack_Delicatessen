@@ -6,7 +6,7 @@ import BasketContainer from "./BasketContainer.js";
 import HomeContainer from "./HomeContainer.js"
 import Footer from '../Footer.js'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import CheeseComponent from '../components/CheeseComponent.js';
+import ProduceComponent from '../components/ProduceComponent.js';
 
 
 
@@ -27,24 +27,24 @@ const RoutesContainer = () =>{
             <Route path="/basket" component={BasketContainer} />
 
             <Route exact path="/bluecheese" render ={(props) => {
-            return <CheeseComponent product = {blue}/> 
+            return <ProduceComponent product = {blue}/> 
             }}/>
 
 
             
             <Route exact path="/hardcheese" render ={(props) => {
-            return <CheeseComponent product = {hard}/> 
+            return <ProduceComponent product={hard} />; 
             }}/>
             
             
             <Route exact path="/softcheese" render ={(props) => {
-            return <CheeseComponent product = {soft}/> 
+            return <ProduceComponent product={soft} />; 
             }}/>
 
 
 
             <Route exact path="/pantry" render ={(props) => {
-            return <CheeseComponent product = {pantry}/> 
+            return <ProduceComponent product={pantry} />; 
             }}/>
           </Switch>
           <Footer/>

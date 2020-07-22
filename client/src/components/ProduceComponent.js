@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Request from "../helpers/request.js";
 
-function CheeseComponent() {
+function ProduceComponent() {
   const [produce, setProduce] = useState([]);
 
   useEffect(() => {
     // container for fetched data
     const tempProduce = [];
-    const url = "/api/produce/type/softcheese";
+    const url = "/api/produce/type/hardcheese";
     const request = new Request();
-    request.get(url)
-      .then(data => console.log(data))
+    request.get(url).then((data) => console.log(data));
   }, []);
 
-  return <h1> hello I am the cheese compnent I am poorly named</h1>;
+  return <h1> Hello I am the Produce compnent </h1>;
 }
 
-export default CheeseComponent;
+export default ProduceComponent;

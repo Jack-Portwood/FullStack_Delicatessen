@@ -24,12 +24,11 @@
 
 .footer{
   background: rgb(49, 53, 59);;
-  height: 50vh;
+  height: 40vh;
    
 }
 
 .produce-boxes {
-  align-items: ;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -70,5 +69,12 @@
 .product-image {
   height: 45vh;
   width:  45vh;
+  display: flex ;
+  padding-left: 250px;
+  padding-bottom: 50px;
 
+}
+
+.product-name {
+  padding-left: 250px;
 }

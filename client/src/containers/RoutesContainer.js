@@ -54,10 +54,3 @@ const RoutesContainer = () =>{
 
 export default RoutesContainer;
 
-/* <Route
-  path="/personalloan"
-  exact
-  render={(props) => {
-    return <Loan handledataLoan={handledataLoan} loandata={loandata} />;
-  }}
-/>; */ //code from Peter check out Pirates for routes

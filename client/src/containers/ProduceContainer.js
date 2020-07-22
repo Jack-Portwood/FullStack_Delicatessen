@@ -8,32 +8,22 @@ const ProduceContainer = () => {
     
 
     return (
-      <div className = "produce-boxes">
-        
-          <div className = "blue-cheese-box">
-            <Link to="/bluecheese">Blue Cheese
-              <img src = {image4}></img>
-            </Link>
-          </div>
+      <div className="produce-boxes">
+        <Link to="/bluecheese">
+          Blue Cheese<img src={image4} height="300" width="300"></img>
+        </Link>
 
-          <div className = "hard-cheese-box">
-            <Link to="/hardcheese">Hard Cheese
-              <img src = {image5}></img>
-             </Link>
-          </div>
+        <Link to="/hardcheese">
+          Hard Cheese<img src={image5} height="300" width="300"></img>
+        </Link>
 
-          <div className = "soft-cheese-box">
-             <Link to="/softcheese">Soft Cheese
-              <img src = {image6}></img>
-             </Link> 
-          </div>
+        <Link to="/softcheese">
+          Soft Cheese<img src={image6} height="300" width="300"></img>
+        </Link>
 
-          <div className = "pantry-box">
-            <Link to="/pantry">Pantry
-              <img src = {image7}></img>
-            </Link> 
-          </div>
-
+        <Link to="/pantry">
+          Pantry <img src={image7} height="300" width="300"></img>
+        </Link>
       </div>
     );
     

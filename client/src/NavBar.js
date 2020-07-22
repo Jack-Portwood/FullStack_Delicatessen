@@ -1,22 +1,22 @@
 import React from 'react';
-
+import { NavLink } from "react-router-dom";
 const NavBar = (props) => {
     return (
       <header className="navbar">
         <div className="navbar-title"> Ollie Burdekin's Delicatessen</div>
 
-        <div className="navlink">
-          <a href="/home"> Home </a>
-        </div>
-        <div className="navlink">
-          <a href="/produce"> Produce </a>
-        </div>
-        <div className="navlink">
-          <a href="/contact"> Contact </a>
-        </div>
-        <div className="navlink">
-          <a href="/basket"> Basket </a>
-        </div>
+        
+          <NavLink to="/home" className="navlink">  Home </NavLink>
+        
+        
+          <NavLink to="/produce"className="navlink"> Produce </NavLink>
+        
+        
+          <NavLink to="/contact"className="navlink"> Contact </NavLink>
+       
+        
+          <NavLink to="/basket" className="navlink"> Basket </NavLink>
+        
       </header>
     );
 }

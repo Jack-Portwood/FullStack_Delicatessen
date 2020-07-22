@@ -14,14 +14,15 @@ function ProduceComponent(props) {
   const stock = produce.map((item, index) => (
     <div>
       {item.name}
-      
-        <img className="product-image" src={item.imgLink} />
+      <img className="product-image" src={item.imgLink} />
 
     </div>
   ));
 
   return (
-  <ul> {stock} </ul>
+  <div className = "produce-container"> 
+  {stock} 
+  </div>
   );
 }
 

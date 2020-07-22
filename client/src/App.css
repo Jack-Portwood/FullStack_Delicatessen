@@ -61,6 +61,11 @@
   margin: 20px;
 }
 
+.produce-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
 .product-image {
   height: 45vh;
   width:  45vh;

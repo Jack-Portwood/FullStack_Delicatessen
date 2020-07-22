@@ -5,8 +5,7 @@ function ProduceComponent(props) {
   const [produce, setProduce] = useState([]);
 
   useEffect(() => {
-    // container for fetched data
-    const tempProduce = [];
+    // fetch request useeffecthooks
     const url = `/api/produce/type/${props.product}`;
     const request = new Request();
     request.get(url).then((data) => setProduce(data));

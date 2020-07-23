@@ -19,7 +19,7 @@ const RoutesContainer = () =>{
     return (
       <Router>
         <Fragment>
-          <NavBar />
+          <NavBar />    
           <Switch>
 
             <Route path="/home" component={HomeContainer} />

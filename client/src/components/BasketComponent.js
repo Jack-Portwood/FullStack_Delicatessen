@@ -1,16 +1,17 @@
 import React from "react";
-import ProduceComponent from "./ProduceComponent.js";
 
-function BasketConponent (){
 
-    return(
-    <div>
+function BasketComponent (){
+
+    
+    
+
+    return (
+      <div>
         <p>here is your shopping</p>
-        <ProduceComponent/>
-        
-    </div>
-    )
+      </div>
+    );
 
 }
 
-export default BasketConponent;
+export default BasketComponent;

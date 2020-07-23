@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import RoutesContainer from './containers/RoutesContainer';
 import "./App.css" 
+import BasketContainer from './containers/BasketContainer';
 
 
-class App extends Component {
+function App () {
 
   
 
 
 
-  render(){
+  
   return (
     <div>
-      <RoutesContainer/>
+      <BasketContainer/>
+      <RoutesContainer />
+  
     </div>
   );
   }
-}
+
 export default App;

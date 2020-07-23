@@ -13,9 +13,9 @@ function ProduceComponent(props) {
 
   //maps over array and outputs indiviual items
   const stock = produce.map((item, index) => (
-    <div>
-      <img className="product-image" src={item.imgLink} />
-      <div className="product-name">
+    
+      <div className="product-data" key={index}>
+        <img className="product-image" src={item.imgLink} />
         <p className="product-name">{item.name}</p>
         <p className="product-stype"> Style: {item.style}</p>
         <p className="product-orgin"> Origin: {item.origin}</p>
@@ -23,7 +23,7 @@ function ProduceComponent(props) {
         <p className="product-price">£{item.retailPrice}</p>
         <button>Add to Basket</button>
       </div>
-    </div>
+    
   ));
 
   return (

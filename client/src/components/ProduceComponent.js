@@ -17,9 +17,11 @@ function ProduceComponent(props) {
       <img className="product-image" src={item.imgLink} />
       <div className="product-name">
         <p className="product-name">{item.name}</p>
-        <p className="product-info">{item.info}</p>
-        <p className="product-stype">{item.style}</p>
-        <p className="product-orgin">{item.origin}</p>
+        <p className="product-stype"> Style: {item.style}</p>
+        <p className="product-orgin"> Origin: {item.origin}</p>
+        <p className="product-info"> Description: {item.info}</p>
+        <p className="product-price">£{item.retailPrice}</p>
+        <button>Add to Basket</button>
       </div>
     </div>
   ));
@@ -27,8 +29,6 @@ function ProduceComponent(props) {
   return (
     <div className="produce-container">
       {stock}
-      
-    
     </div>
   );
 }

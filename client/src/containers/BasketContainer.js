@@ -1,10 +1,11 @@
 import React from 'react';
+import BasketComponent from '../components/BasketComponent.js';
+function BasketContainer () {
 
-function BasketContainer(){
     return (
+        <BasketComponent/>
     
-        <h1>Hello Im the Basket Container</h1>
-        )
+    );
     
     
 }

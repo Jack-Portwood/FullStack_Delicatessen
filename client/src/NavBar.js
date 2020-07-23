@@ -15,7 +15,7 @@ const NavBar = () => {
           <NavLink to="/contact"className="navlink"> Contact </NavLink>
        
         
-          <NavLink to="/basket" className="navlink"> Basket </NavLink>
+          <NavLink to="/basket" className="navlink"> Basket  </NavLink>
         
       </header>
     );

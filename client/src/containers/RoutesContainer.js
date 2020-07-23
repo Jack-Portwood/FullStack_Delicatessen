@@ -43,8 +43,6 @@ const RoutesContainer = () =>{
             return <ProduceComponent product={pantry} />; 
             }}/>
 
-      
-            
           </Switch>
           <Footer/>
         </Fragment>

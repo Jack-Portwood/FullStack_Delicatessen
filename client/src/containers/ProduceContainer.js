@@ -10,20 +10,19 @@ const ProduceContainer = () => {
     return (
       <div className="produce-boxes">
         <NavLink to="/bluecheese" className="produce-link">
-          Blue Cheese<img src={image4} height="300" width="300"></img>
+          Blue Cheese<img src={image4} height="300" width="300" alt="cheesePic"></img>
         </NavLink>
 
         <NavLink to="/hardcheese" className="produce-link">
-          Hard Cheese<img src={image5} height="300" width="300"></img>
+          Hard Cheese<img src={image5} height="300" width="300" alt="cheesePic"></img>
         </NavLink>
 
         <NavLink to="/softcheese" className="produce-link">
-          Soft Cheese<img src={image6} height="300" width="300"></img>
+          Soft Cheese<img src={image6} height="300" width="300"alt="cheesePic"></img>
         </NavLink>
 
         <NavLink to="/pantry" className="produce-link">
-          Pantry <img src={image7} height="300" width="300" ></img>
-        </NavLink>
+          Pantry<img src={image7} height="300" width="300" alt="cheesePic"></img></NavLink>
       </div>
     );
     

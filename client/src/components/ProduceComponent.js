@@ -3,6 +3,7 @@ import Request from "../helpers/request.js";
 
 function ProduceComponent(props) {
   const [produce, setProduce] = useState([]);
+  const [basket, setBasket] = useState([]);
 
   useEffect(() => {
     // fetch request useeffecthooks
@@ -11,8 +12,14 @@ function ProduceComponent(props) {
     request.get(url).then((data) => setProduce(data));
   }, []);
 
+  //push item into basket uses destructuring 
+  const addToBasket = (produce) => {
+    setBasket([...basket,produce]);
+  }
+
   //maps over array and outputs indiviual items
   const stock = produce.map((item, index) => (
+    
     
       <div className="product-data" key={index}>
         <img className="product-image" src={item.imgLink} />
@@ -21,7 +28,7 @@ function ProduceComponent(props) {
         <p className="product-orgin"> Origin: {item.origin}</p>
         <p className="product-info"> Description: {item.info}</p>
         <p className="product-price">£{item.retailPrice}</p>
-        <button>Add to Basket</button>
+        <button onClick={() => addToBasket(produce)}>Add to Basket</button>
       </div>
     
   ));

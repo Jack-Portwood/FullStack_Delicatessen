@@ -1,22 +1,18 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import RoutesContainer from './containers/RoutesContainer';
+import BasketContainer from "./containers/BasketContainer";
 import "./App.css" 
-import BasketContainer from './containers/BasketContainer';
+
+
 
 
 function App () {
 
-  
 
-
-
-  
   return (
-    <div>
-      <BasketContainer/>
+    <Fragment>
       <RoutesContainer />
-  
-    </div>
+    </Fragment>
   );
   }
 

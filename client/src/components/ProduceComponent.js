@@ -3,24 +3,31 @@ import Request from "../helpers/request.js";
 
 function ProduceComponent(props) {
   const [produce, setProduce] = useState([]);
-  const [basket, setBasket] = useState([]);
-
-
+  const [basket, setBasket] = useState([props.basket]);
 
   useEffect(() => {
+    console.log(props)
+    debugger
+    passDataUp()
     // fetch request useeffecthooks
     const url = `/api/produce/type/${props.product}`;
     const request = new Request();
     request.get(url).then((data) => setProduce(data));
-  }, []);
+  }, [basket]);
 
 
-
+  function passDataUp() {
+    props.handleB(basket);
+  // console.log(props.number)
+  }
 
   //push item into basket uses destructuring 
   const addToBasket = (item) => {
     setBasket([...basket,item]);
+    
   }
+
+  
 
   
   //maps over array and outputs indiviual items
@@ -40,13 +47,12 @@ function ProduceComponent(props) {
 
   return (
     <header>
-    {/* move funcitonality to Navbar link */}
       <button> Go to Basket ({basket.length})</button>
       <div className="produce-container">{stock}</div>
-    </header>
+    </header> 
     
     
   );
-}
+  }
 
 export default ProduceComponent;

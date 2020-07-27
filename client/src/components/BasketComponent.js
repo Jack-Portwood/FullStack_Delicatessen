@@ -1,15 +1,18 @@
 import React from "react";
+import ProduceComponent from "./ProduceComponent"
 
 
 function BasketComponent (){
 
+
+  
     
     
 
     return (
-      <div>
-        <p>here is your shopping</p>
-      </div>
+      <section>
+        < ProduceComponent/> 
+      </section>
     );
 
 }

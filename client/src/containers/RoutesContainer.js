@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import NavBar from '../NavBar.js';
 import ProduceContainer from "./ProduceContainer.js";
 import ContactContainer from "./ContactContainer.js";
@@ -10,41 +10,88 @@ import ProduceComponent from '../components/ProduceComponent.js';
 
 
 
-const RoutesContainer = () =>{
+function RoutesContainer(props){
+  const [basket, setBasket] = useState([])
+
+
+function handleBasket(basket) {
+  setBasket(basket)
+  return "Hello"
+}
+
+
 
   const blue = "bluecheese"
   const hard = "hardcheese"
   const soft = "softcheese"
   const pantry = "pantry"
+
     return (
       <Router>
         <Fragment>
-          <NavBar />    
+          <NavBar />
           <Switch>
-
             <Route path="/home" component={HomeContainer} />
-            <Route path="/produce" component={ProduceContainer} />
+            <Route
+              path="/produce" 
+              render={(props) => {
+                return<ProduceContainer handleB={handleBasket}
+                />;
+              }}
+            />
+
             <Route path="/contact" component={ContactContainer} />
             <Route path="/basket" component={BasketContainer} />
 
-            <Route exact path="/bluecheese" render ={(props) => {
-            return <ProduceComponent product = {blue}/>;
-            }}/>
+            <Route
+              exact
+              path="/bluecheese"render={(props) => {
+                return (
+                  <ProduceComponent basket={basket}
+                    handleB={handleBasket}
+                    product={blue}
+                  />
+                );
+              }}
+            />
 
-            <Route exact path="/hardcheese" render ={(props) => {
-            return <ProduceComponent product={hard} />; 
-            }}/>
-      
-            <Route exact path="/softcheese" render ={(props) => {
-            return <ProduceComponent product={soft} />; 
-            }}/>
+            <Route
+              exact path="/hardcheese" render={(props) => {
+                return (
+                  <ProduceComponent
+                    basket={basket}
+                    handleB={handleBasket}
+                    product={hard}
+                  />
+                );
+              }}
+            />
 
-            <Route exact path="/pantry" render ={(props) => {
-            return <ProduceComponent product={pantry} />; 
-            }}/>
+            <Route
+              exact path="/softcheese" render={(props) => {
+                return (
+                  <ProduceComponent
+                    basket={basket}
+                    handleB={handleBasket}
+                    product={soft}
+                  />
+                );
+              }}
+            />
 
+            <Route
+              exact path="/pantry" render={(props) => { 
+                return (
+                  <ProduceComponent
+                    basket={basket}
+                    handleB={handleBasket}
+                    product={pantry}
+                  />
+                );
+            }}
+            />
           </Switch>
-          <Footer/>
+          <Footer />
         </Fragment>
       </Router>
     );

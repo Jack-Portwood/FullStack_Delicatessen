@@ -6,7 +6,6 @@ function BasketContainer (props) {
 
     return (
         <BasketComponent/>
-    
     );
     
     

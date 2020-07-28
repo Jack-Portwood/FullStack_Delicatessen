@@ -20,7 +20,7 @@ function ProduceComponent(props) {
 
   //push item into basket uses destructuring 
   const addToBasket = (item) => {
-    setBasket([...basket,item]);
+    setBasket([...basket,{...item}]);
     
   }
 

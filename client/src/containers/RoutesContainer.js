@@ -35,7 +35,7 @@ function handleBasket(basket) {
             <Route
               path="/produce" 
               render={(props) => {
-                return<ProduceContainer handleB={handleBasket}
+                return<ProduceContainer basket={basket} handleB={handleBasket}
                 />;
               }}
             />

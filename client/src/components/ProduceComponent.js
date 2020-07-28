@@ -3,7 +3,7 @@ import Request from "../helpers/request.js";
 
 function ProduceComponent(props) {
   const [produce, setProduce] = useState([]);
-  const [basket, setBasket] = useState([props.basket]);
+  const [basket, setBasket] = useState(props.basket);
 
   useEffect(() => {
     passDataUp()
@@ -14,7 +14,7 @@ function ProduceComponent(props) {
   }, [basket]);
 
 
-  function passDataUp() {
+  const passDataUp = () => {
     props.handleB(basket);
   }
 
@@ -44,7 +44,6 @@ function ProduceComponent(props) {
 
   return (
     <header>
-      <button> Go to Basket ({basket.length})</button>
       <div className="produce-container">{stock}</div>
     </header> 
     

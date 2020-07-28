@@ -10,11 +10,11 @@ import ProduceComponent from '../components/ProduceComponent.js';
 
 
 
-function RoutesContainer(props){
+const RoutesContainer = (props) => {
   const [basket, setBasket] = useState([])
 
-
-function handleBasket(basket) {
+//setting contents of basket 
+const handleBasket =(basket) => {
   setBasket(basket)
 }
 
@@ -35,16 +35,16 @@ function handleBasket(basket) {
             <Route
               path="/produce" 
               render={(props) => {
-                return<ProduceContainer basket={basket} handleB={handleBasket}
+                return<ProduceContainer basket={basket}  handleB={handleBasket}
                 />;
               }}
             />
 
             <Route path="/contact" component={ContactContainer} />
             
-            <Route excat path="/basket" render= {(props) => {
+            <Route exact path="/basket" render= {(props) => {
               return (
-                <BasketContainer basket={basket} />
+                <BasketContainer basket={basket} handleB={handleBasket} />
               );
             }} />
 

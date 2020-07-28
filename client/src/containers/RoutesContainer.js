@@ -79,7 +79,7 @@ function handleBasket(basket) {
             />
 
             <Route
-              exact path="/pantry" render={(props) => { 
+              exact path="/pantrycomp" render={(props) => { 
                 return (
                   <ProduceComponent basket={basket} handleB={handleBasket}
                     product={pantry}

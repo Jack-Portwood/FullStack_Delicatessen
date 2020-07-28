@@ -6,15 +6,15 @@ import image6 from "../images/image6.jpg";
 import image7 from "../images/image7.jpg";
 
 
-const ProduceContainer = (props) => {
-    
+const ProduceContainer = () => {
+     
     return (
       <div className="produce-boxes">
         
         <NavLink to = "/bluecheesecomp" className="produce-link">
           Blue Cheese<img src={image4} height="300" width="300" alt="cheesePic"></img>
         </NavLink>
-
+       
         <NavLink to="/hardcheesecomp" className="produce-link">
           Hard Cheese<img src={image5} height="300" width="300" alt="cheesePic"></img>
         </NavLink>

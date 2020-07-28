@@ -6,7 +6,6 @@ function ProduceComponent(props) {
   const [basket, setBasket] = useState([props.basket]);
 
   useEffect(() => {
-    console.log(props)
     passDataUp()
     // fetch request useeffecthooks
     const url = `/api/produce/type/${props.product}`;

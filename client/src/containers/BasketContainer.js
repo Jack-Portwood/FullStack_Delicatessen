@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 
 function BasketContainer (props) {
-  const [basket, setBasket] = useState([props.basket]);
-    console.log("hello",props.basket)
+    //can possibly be removed 
+    
+ 
     //maps over array and outputs indiviual items
   const stock = props.basket.map((item, index) => (
     <div className="product-data" key={index}>
@@ -12,10 +13,9 @@ function BasketContainer (props) {
   ));
 
     return (
-      [stock]
+    <div>{stock}</div> 
+    
     );
-    
-    
 }
 
 export default BasketContainer; 

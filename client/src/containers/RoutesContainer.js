@@ -44,7 +44,7 @@ function handleBasket(basket) {
             
             <Route excat path="/basket" render= {(props) => {
               return (
-                <BasketContainer basket={basket} handleB={handleBasket} />
+                <BasketContainer basket={basket} />
               );
             }} />
 

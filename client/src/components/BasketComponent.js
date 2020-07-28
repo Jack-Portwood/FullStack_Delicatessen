@@ -2,8 +2,9 @@ import React from "react";
 import ProduceComponent from "./ProduceComponent";
 
 
-function BasketComponent (){
+function BasketComponent (props){
 
+  
 
   
     

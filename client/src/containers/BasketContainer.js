@@ -1,11 +1,12 @@
 import React from 'react';
-import BasketComponent from '../components/BasketComponent.js';
 function BasketContainer (props) {
 
     
 
     return (
-        <BasketComponent/>
+      <p>
+        "Basket Container responilbe for rendering contents of basket array"
+      </p>
     );
     
     

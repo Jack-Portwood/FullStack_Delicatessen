@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {NavLink, Link} from 'react-router-dom';
+import React from "react";
+import {NavLink} from 'react-router-dom';
 import image4 from "../images/image4.jpg";
 import image5 from "../images/image5.jpg";
 import image6 from "../images/image6.jpg";
@@ -10,7 +10,7 @@ const ProduceContainer = (props) => {
     
     return (
       <div className="produce-boxes">
-        {/* cannot pass props through link */}
+        
         <NavLink to = "/bluecheese" className="produce-link">
           Blue Cheese<img src={image4} height="300" width="300" alt="cheesePic"></img>
         </NavLink>

@@ -1,5 +1,5 @@
 import React from "react";
-import ProduceComponent from "./ProduceComponent"
+import ProduceComponent from "./ProduceComponent";
 
 
 function BasketComponent (){

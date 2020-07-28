@@ -7,7 +7,6 @@ function ProduceComponent(props) {
 
   useEffect(() => {
     console.log(props)
-    debugger
     passDataUp()
     // fetch request useeffecthooks
     const url = `/api/produce/type/${props.product}`;
@@ -18,7 +17,6 @@ function ProduceComponent(props) {
 
   function passDataUp() {
     props.handleB(basket);
-  // console.log(props.number)
   }
 
   //push item into basket uses destructuring 

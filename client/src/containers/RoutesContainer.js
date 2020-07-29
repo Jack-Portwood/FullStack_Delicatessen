@@ -7,6 +7,8 @@ import HomeContainer from "./HomeContainer.js"
 import Footer from '../Footer.js'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ProduceComponent from '../components/ProduceComponent.js';
+import BasketComponent from '../components/BasketComponent.js';
+
 
 
 
@@ -44,7 +46,7 @@ const handleBasket =(basket) => {
             
             <Route exact path="/basket" render= {(props) => {
               return (
-                <BasketContainer basket={basket} handleB={handleBasket} />
+                <BasketComponent basket={basket} handleB={handleBasket} />
               );
             }} />
 

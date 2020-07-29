@@ -25,8 +25,6 @@ function ProduceComponent(props) {
   }
 
   
-
-  
   //maps over array and outputs indiviual items
   const stock = produce.map((item, index) => (
     

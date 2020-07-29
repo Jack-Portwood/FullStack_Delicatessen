@@ -1,29 +1,34 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState, useEffect,Fragment, } from 'react';
 import {Link} from 'react-router-dom';
-const BasketTotalComponent = (props) =>{
-
-    const [BasketTotal, SetBasketTotal] = useState(0)
 
 
+const BasketItemComponent = (props) =>{
 
+    const [BasketTotal, SetBasketTotal] = useState(100)
+
+    
+    //need to understand this better
      const clearBasket =(BasketTotal) => {
      SetBasketTotal(
-     BasketTotal.length === 0 ? true:false
+     BasketTotal === 0 ? true:false
      );
    }
 
-    return (
+   
+
+       return (
       <Fragment>
         <Link to="/home">
           <button className="Clear-Basket" onClick={() => {clearBasket(BasketTotal)}} >
             Clear Basket
             </button>
         </Link>
-        <span>Total: £</span>
+      <div>Total: £ {BasketTotal}</div>
+
       </Fragment>
     );
-
-
+   
+    
 }
 
-export default BasketTotalComponent;
+export default BasketItemComponent;

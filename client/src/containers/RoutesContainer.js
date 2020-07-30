@@ -36,7 +36,7 @@ const handleBasket =(basket) => {
             <Route
               path="/produce" 
               render={(props) => {
-                return<ProduceContainer basket={basket}  handleB={handleBasket}
+                return<ProduceComponent basket={basket}  handleB={handleBasket}
                 />;
               }}
             />
@@ -52,7 +52,7 @@ const handleBasket =(basket) => {
             <Route
               exact path="/bluecheesecomp"render={(props) => {
                 return (
-                  <ProduceComponent basket={basket} handleB={handleBasket}
+                  <ProduceContainer basket={basket} handleB={handleBasket}
                     product={blue}
                   />
                 );
@@ -62,7 +62,9 @@ const handleBasket =(basket) => {
             <Route
               exact path="/hardcheesecomp" render={(props) => {
                 return (
-                  <ProduceComponent basket={basket} handleB={handleBasket}
+                  <ProduceContainer
+                    basket={basket}
+                    handleB={handleBasket}
                     product={hard}
                   />
                 );
@@ -72,7 +74,9 @@ const handleBasket =(basket) => {
             <Route
               exact path="/softcheesecomp" render={(props) => {
                 return (
-                  <ProduceComponent basket={basket} handleB={handleBasket}
+                  <ProduceContainer
+                    basket={basket}
+                    handleB={handleBasket}
                     product={soft}
                   />
                 );
@@ -82,7 +86,9 @@ const handleBasket =(basket) => {
             <Route
               exact path="/pantrycomp" render={(props) => { 
                 return (
-                  <ProduceComponent basket={basket} handleB={handleBasket}
+                  <ProduceContainer
+                    basket={basket}
+                    handleB={handleBasket}
                     product={pantry}
                   />
                 );

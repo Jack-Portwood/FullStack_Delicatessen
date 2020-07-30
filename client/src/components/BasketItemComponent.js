@@ -1,18 +1,19 @@
 import React, {useState, useEffect,Fragment, } from 'react';
 import {Link} from 'react-router-dom';
 
-
 const BasketItemComponent = (props) =>{
 
-    const [BasketTotal, SetBasketTotal] = useState(100)
+    const [BasketTotal, SetBasketTotal] = useState([])
 
     
     //need to understand this better
      const clearBasket =(BasketTotal) => {
      SetBasketTotal(
-     BasketTotal === 0 ? true:false
+     BasketTotal === 0 
      );
    }
+
+   
 
    
 
@@ -24,7 +25,6 @@ const BasketItemComponent = (props) =>{
             </button>
         </Link>
       <div>Total: £ {BasketTotal}</div>
-
       </Fragment>
     );
    

@@ -1,23 +1,32 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import NavBar from '../NavBar.js';
 import ProduceContainer from "./ProduceContainer.js";
 import ContactContainer from "./ContactContainer.js";
-import BasketContainer from "./BasketContainer.js"; 
 import HomeContainer from "./HomeContainer.js"
 import Footer from '../Footer.js'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ProduceComponent from '../components/ProduceComponent.js';
+import BasketListComponent from '../components/BasketListComponent.js';
 
 
 
 
 const RoutesContainer = (props) => {
-  const [basket, setBasket] = useState([])
+  const [basket, setBasket] = useState([  
+  ]);
+
+  useEffect(() => {
+  }, [basket]);
 
 //setting contents of basket 
-const handleBasket =(basket) => {
-  setBasket(basket)
+function handleBasket (newBasket) {
+    console.log("I am Router");
+
+  setBasket(newBasket)
+  console.log(basket)
 }
+
+
 
 
 
@@ -45,9 +54,10 @@ const handleBasket =(basket) => {
             
             <Route exact path="/basket" render= {(props) => {
               return (
-                <BasketContainer basket={basket} handleB={handleBasket} />
+                <BasketListComponent basket={basket} handleB={handleBasket} />
               );
-            }} />
+            }} 
+          />
 
             <Route
               exact path="/bluecheesecomp"render={(props) => {
@@ -62,9 +72,7 @@ const handleBasket =(basket) => {
             <Route
               exact path="/hardcheesecomp" render={(props) => {
                 return (
-                  <ProduceContainer
-                    basket={basket}
-                    handleB={handleBasket}
+                  <ProduceContainer basket={basket} handleB={handleBasket}
                     product={hard}
                   />
                 );
@@ -74,9 +82,7 @@ const handleBasket =(basket) => {
             <Route
               exact path="/softcheesecomp" render={(props) => {
                 return (
-                  <ProduceContainer
-                    basket={basket}
-                    handleB={handleBasket}
+                  <ProduceContainer basket={basket} handleB={handleBasket}
                     product={soft}
                   />
                 );
@@ -86,13 +92,11 @@ const handleBasket =(basket) => {
             <Route
               exact path="/pantrycomp" render={(props) => { 
                 return (
-                  <ProduceContainer
-                    basket={basket}
-                    handleB={handleBasket}
-                    product={pantry}
+                  <ProduceContainer basket={basket} handleB={handleBasket} 
+                  product={pantry}
                   />
                 );
-            }}
+              }}
             />
           </Switch>
           <Footer />

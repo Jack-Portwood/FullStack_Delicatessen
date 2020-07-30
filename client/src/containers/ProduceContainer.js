@@ -14,13 +14,13 @@ function ProduceComponent(props) {
     request.get(url).then((data) => setProduce(data));
   }, [basket]);
 
-  const passDataUp = () => {
+  function passDataUp()  {
     props.handleB(basket);
   };
 
   //push item into basket uses destructuring
   const addToBasket = (item) => {
-    setBasket([...basket, { ...item }]);
+    setBasket([...basket, {...item} ]);
   };
 
   //maps over array and outputs indiviual items

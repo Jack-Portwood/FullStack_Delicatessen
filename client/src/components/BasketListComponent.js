@@ -1,5 +1,5 @@
 import React, {useState, useEffect,Fragment, } from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const BasketListComponent = (props) =>{
 
@@ -9,7 +9,6 @@ const BasketListComponent = (props) =>{
 
   useEffect(() => {
     caluculateTotal()
-    // setBasketState(props.basket);
   }, [counter,props.basket]);
 
   function removeFromBasket (event) {
@@ -48,22 +47,22 @@ const BasketListComponent = (props) =>{
   ));
 
     
-    //need to understand this better
-     function clearBasket(event) {
+  //onlclick sents array to be empty in props and state
+  function clearBasket(event) {
     event.preventDefault()
-     props.handleB([])
-     setBasketState([])
+    props.handleB([])
+    setBasketState([])
+    
    }
 
        return (
          <Fragment>
            <div>{itemInBasket}</div>
-
-           <Link to="/home">
-             <button className="Clear-Basket"onClick={clearBasket}>
+           <NavLink to="/home">
+             <button className="Clear-Basket" onClick={clearBasket}>
                Clear Basket
              </button>
-           </Link>
+           </NavLink>
            <div>Total: £ {basketTotal}</div>
          </Fragment>
        );

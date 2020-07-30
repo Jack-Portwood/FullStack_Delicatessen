@@ -1,10 +1,23 @@
-import React from "react";
+import React, { Fragment } from "react";
+import {FacebookIcon, TwitterIcon,RedditIcon} from "react-share";
 
 function ContactContainer() {
-    return (
     
-    <h1>Hello Im the Contact Container</h1>
-    )
+    return (
+      <div className="styles">
+        <a>
+          <FacebookIcon icon={FacebookIcon} />
+        </a>
+        <a>
+          <TwitterIcon icon={TwitterIcon} />
+        </a>
+        <a
+          href="https://www.reddit.com/r/Cheese/"
+          >
+          <RedditIcon icon={RedditIcon} />
+        </a>
+      </div>
+    );
 
 }
 

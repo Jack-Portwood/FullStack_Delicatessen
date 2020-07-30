@@ -20,10 +20,7 @@ const RoutesContainer = (props) => {
 
 //setting contents of basket 
 function handleBasket (newBasket) {
-    console.log("I am Router");
-
   setBasket(newBasket)
-  console.log(basket)
 }
 
 

@@ -1,23 +1,32 @@
 import React, { Fragment } from "react";
-import {FacebookIcon, TwitterIcon,RedditIcon} from "react-share";
+import {FacebookIcon,TwitterIcon,RedditIcon} from "react-share";
 
 function ContactContainer() {
     
     return (
-      <div className="styles">
-        <a>
-          <FacebookIcon icon={FacebookIcon} />
-        </a>
-        <a>
-          <TwitterIcon icon={TwitterIcon} />
-        </a>
-        <a
-          href="https://www.reddit.com/r/Cheese/"
+      <div className="social-container">
+          <a
+            href="https://www.facebook.com/CheesePageOfficial/"
+            className="FB social"
           >
-          <RedditIcon icon={RedditIcon} />
-        </a>
+            <FacebookIcon icon={"FacebookIcon"} size="5rem" />
+          </a>
+
+          <a
+            href="https://twitter.com/search?q=%23cheese&src=typeahead_click"
+            className="TW social"
+            >
+            <TwitterIcon icon={"TwitterIcon"} size="5rem" />
+          </a>
+
+          <a href="https://www.reddit.com/r/Cheese/" className="RD social">
+            <RedditIcon icon={"RedditIcon"} size="5rem" />
+          </a>
+
       </div>
     );
+
+
 
 }
 

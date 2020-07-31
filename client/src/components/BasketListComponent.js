@@ -13,7 +13,6 @@ const BasketListComponent = (props) =>{
 
   function removeFromBasket (event) {
     event.preventDefault()
-    console.log(event.target.value)
     // makes clone of state to manipulate
     let newBasket = basketState
     newBasket.splice((event.target.value), 1);
@@ -21,7 +20,7 @@ const BasketListComponent = (props) =>{
     //sets new state from maipulated data
     setBasketState(newBasket)
     
-    //pushing data back up to routercontainer
+    //pushing data back up to router container
     props.handleB(newBasket);
 
     //forces re-render 

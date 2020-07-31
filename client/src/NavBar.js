@@ -5,8 +5,8 @@ const NavBar = () => {
       <header className="navbar">
         <div className="navbar-title"> Ollie Burdekin's Delicatessen</div>
 
-        
-          <NavLink to="/home" className="navlink">  Home </NavLink>
+        <a>
+         <NavLink to="/home" className="navlink"> Home </NavLink>
         
         
           <NavLink to="/produce"className="navlink"> Produce </NavLink>
@@ -16,6 +16,8 @@ const NavBar = () => {
        
         
           <NavLink to="/basket" className="navlink"> Basket  </NavLink>
+        </a>
+          
         
       </header>
     );

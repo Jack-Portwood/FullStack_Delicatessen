@@ -3,15 +3,16 @@
   display: flex;
   align-items: center;
   background:#1a2228;
-  color: aliceblue;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  
   padding-bottom: 150px;
   
 }
 
 .navbar-title {
+  color: aliceblue;
   margin-right: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   font-size: 250%;
   padding: 12px 16px; 
 }
@@ -22,9 +23,29 @@
   color:whitesmoke;
   text-decoration: none;
   font-weight: bold;
-  
+  font-size: 150%;
+  position: relative;
+}
+
+.navlink:before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: #ecf0f1;
+	height: 1px;
+	width: 0;
+	transform: translateX(-50%);
+	transition: all 0.3s linear;
+
 
 }
+.navlink:hover:before{
+	width: 100%;
+}
+
+
+
 
 .footer{
   background: rgb(49, 53, 59);;
@@ -78,10 +99,10 @@
 
 a.social {
   margin: 0 1rem;
-  transition: transform 250ms;
+  transition: transform 150ms;
   display: inline-block;
 }
 
 a.social:hover {
-  transform: translateY(-2px)
+  transform: translateY(-3px)
 }

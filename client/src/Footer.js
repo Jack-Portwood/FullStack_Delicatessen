@@ -4,14 +4,15 @@ import {NavLink} from "react-router-dom"
 const Footer = (props) => {
     return (
       <footer className="footer"> 
-        <div className="address">
+        <p className="address">
         432<br/> Ockham Road<br/> East Thirston<br/> NE65 3NB <br/> 078 8209 8789
-        </div>
+        </p>
 
-        <NavLink to="/contact"className="footlink1"> Contact </NavLink>
         
-        <NavLink to="/basket" className="footlink2"> Basket  </NavLink>
-      
+        <NavLink to="/contact"className="footlink1"> Contact Us </NavLink>
+        
+        <NavLink to="/basket" className="footlink"> Basket  </NavLink>
+        
       </footer>
     );
 }

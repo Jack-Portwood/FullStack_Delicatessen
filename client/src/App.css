@@ -1,7 +1,6 @@
 
 .navbar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   background:#1a2228;
   padding: 40px 10%;
@@ -43,13 +42,47 @@
 }
 
 
-
+/*footer*/
 
 .footer{
+  display: flex;
+  align-items: center;
   background: rgb(49, 53, 59);;
   height: 40vh;
-   
 }
+
+.address {
+  color: aliceblue;
+  margin-right: auto;
+  font-family: 'Tangerine', cursive;  font-weight: bold;
+  font-size: 40px;
+  padding-bottom: ;
+}
+
+.footlink1{
+  padding: 16px 16px;
+  vertical-align: middle;
+  color:whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 150%;
+  position: relative;
+}
+.footlink2{
+  
+  padding: 16px 16px;
+  vertical-align: middle;
+  color:whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 150%;
+  position: relative;
+}
+
+
+
+
+
 /* PRODUCE CONTAINER */
 .produce-boxes {
   display: grid;

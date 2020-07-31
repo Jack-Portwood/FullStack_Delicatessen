@@ -1,4 +1,7 @@
 
+.background {
+  background-color: #E7F0FF;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -121,7 +124,13 @@
 
 
 
+/* home page */
 
+.textbox{
+  font-family: 'Cinzel', serif;
+
+
+}
 
 
 

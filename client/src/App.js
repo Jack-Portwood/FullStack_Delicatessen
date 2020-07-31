@@ -9,9 +9,9 @@ import "./App.css"
 
 
   return (
-    <Fragment>
+    <div className = "background">
       <RoutesContainer />
-    </Fragment>
+    </div>
   );
   }
 

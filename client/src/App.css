@@ -1,11 +1,10 @@
 
 .navbar {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   background:#1a2228;
-  
-  padding-bottom: 150px;
-  
+  padding: 40px 10%;
 }
 
 .navbar-title {
@@ -13,8 +12,8 @@
   margin-right: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 250%;
-  padding: 12px 16px; 
+  font-size: 40px;
+  padding: 12px 20px; 
 }
 
 .navlink {

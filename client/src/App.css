@@ -210,3 +210,17 @@ a.social {
 a.social:hover {
   transform: translateY(-3px)
 }
+
+/* BASKET LIST COMPONENT */
+
+.product-data {
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+   font-family: 'Tangerine', cursive;  font-weight: bold;
+  font-weight: bold;
+  font-size: 50px;
+  padding-right: 40px;
+}

@@ -39,7 +39,6 @@ const BasketListComponent = (props) =>{
   const itemInBasket = basketState.map((item, index) => (
     <div className="product-data" key={index}>
       <p className="product-name">{item.name}</p>
-      <img alt="imgDB" className="product-image" src={item.imgLink} />
       <p className="product-price">£{item.retailPrice}</p>
       <button value = {index} onClick={removeFromBasket}>Remove Item</button>
     </div>
@@ -62,7 +61,7 @@ const BasketListComponent = (props) =>{
                Clear Basket
              </button>
            </NavLink>
-           <div>Total: £ {basketTotal}</div>
+           <div className="total"> Total: £ {basketTotal}</div>
          </Fragment>
        );
    

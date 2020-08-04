@@ -32,7 +32,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	background-color: #ecf0f1;
+	background-color: #FAC05E;
 	height: 1px;
 	width: 0;
 	transform: translateX(-50%);
@@ -81,7 +81,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	background-color: #ecf0f1;
+	background-color: #FAC05E;
 	height: 1px;
 	width: 0;
 	transform: translateX(-50%);
@@ -110,7 +110,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	background-color: #ecf0f1;
+	background-color: #FAC05E;
 	height: 1px;
 	width: 0;
 	transform: translateX(-50%);
@@ -154,13 +154,28 @@
   padding: 16px 16px;
   color:rgb(49, 53, 59);
   text-decoration: none;
+  font-family: 'Tangerine', cursive;  font-weight: bold;
   font-weight: bold;
   font-size: 50px;
   text-align: center;
   height: 300;
   width: 300;
-  
+  position: relative;
+}
 
+.produce-link:before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: #FAC05E;
+	height: 1px;
+	width: 0;
+	transform: translateX(-50%);
+  transition: all 0.3s linear;
+}
+.produce-link:hover:before{
+  width: 25%;
 }
 
 

@@ -50,9 +50,9 @@
 .footer{
   display: flex;
   align-items:center;
-  background: rgb(49, 53, 59);;
-  height: 40vh;
-  justify-content: space-between ;
+  background: rgb(49, 53, 59);
+  height: 35vh;
+  justify-content: space-between;
 }
 
 .address {
@@ -139,6 +139,7 @@
 .produce-boxes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 50px;
 } 
 
 .cheese-icon {

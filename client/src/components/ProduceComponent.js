@@ -7,7 +7,7 @@ import { faCheese } from '@fortawesome/free-solid-svg-icons'
 function ProduceContainer() {
   return (
     <Fragment>
-      <FontAwesomeIcon className="cheese-icon" icon={faCheese} size="6x"  />
+      <FontAwesomeIcon className="cheese-icon" icon={faCheese} size="6x" />
 
       <div className="produce-boxes">
         <NavLink to="/bluecheesecomp" className="produce-link">

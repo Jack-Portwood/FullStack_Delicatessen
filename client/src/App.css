@@ -37,9 +37,8 @@
 	width: 0;
 	transform: translateX(-50%);
 	transition: all 0.3s linear;
-
-
 }
+
 .navlink:hover:before{
 	width: 100%;
 }
@@ -60,7 +59,6 @@
   color: aliceblue;
   font-family: 'Tangerine', cursive;  font-weight: bold;
   font-size: 40px;
-  ;
 }
 
 .footlink{
@@ -71,8 +69,6 @@
   font-weight: bold;
   font-size: 150%;
   position: relative;
-  
-
 }
 
 
@@ -125,11 +121,8 @@
 
 
 /* home page */
-
 .textbox{
   font-family: 'Cinzel', serif;
-
-
 }
 
 
@@ -143,9 +136,9 @@
 } 
 
 .cheese-icon {
-  display: flex;
+   display: flex; 
   align-items:center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; 
   padding-left: 750px;
 }
 
@@ -181,11 +174,6 @@
 
 
 
-
-
-
-
-
 /* PRODUCE COMPONENT */
 .produce-container{
   display: grid;
@@ -207,7 +195,10 @@
 /*contents container*/
 .social-container {
   background: #eee;
-  padding: 25px 50px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  
 }
 
 a.social {
